@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 
 const Home = () => {
-    const { loading, error, data } = useFetch('http://localhost:1337/api/reviews');
+    const { loading, error, data } = useFetch('http://localhost:1337/api/reviews/');
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error...</p>;
@@ -15,7 +15,7 @@ const Home = () => {
                     <h2>{review.attributes.title}</h2>
                     <small>console list</small>
                     <p>{review.attributes.body.substring(0, 200)}...</p>
-                    <Link to={`/details/${review.attributes.id}`}>Read more</Link>
+                    <Link to={`/details/${review.id}`}>Read more</Link>
                 </div>
             ))}
         </div>
