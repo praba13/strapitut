@@ -19,7 +19,7 @@ const Header = () => {
 
   if (loading) return <p>Loading categories...</p>;
   if (error) return <p>Error fetching categories</p>;
-  console.log(data);
+  //console.log(data);
   return (
     <div className="site-header">
       <Link to='/' ><h1>PR-Reviews</h1> </Link>
